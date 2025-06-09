@@ -23,7 +23,7 @@ const RestaurantMainPage = () => {
   const info = restaurantDetails?.data?.cards[2]?.card?.card?.info || {};
   console.log(restaurantDetails);
   const itemCategories =
-    restaurantDetails?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR.cards;
+    restaurantDetails?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards;
   console.log(itemCategories);
 
   const {
