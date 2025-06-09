@@ -1,0 +1,45 @@
+.cardContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 90vw; */
+  margin-top: 2rem;
+}
+
+.cardContainer .restaurantCard {
+  border: 1px solid red;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.cardContainer .restaurantCard .restaurant-pic {
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContainer .restaurantCard .restaurant-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.cardContainer .restaurantCard .ratings {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  align-items: flex-end;
+  margin-top: 0.5rem;
+}
+.cardContainer .restaurantCard .ratings img {
+  margin-right: -0.3rem;
+}
+.cardContainer .restaurantCard .ratings .time {
+  font-weight: 600;
+}

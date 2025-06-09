@@ -1,0 +1,24 @@
+{
+  "name": "swiggie",
+  "version": "1.0.0",
+  "description": "A food delivery app.",
+  "license": "ISC",
+  "author": "Nikhar Gupta",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^6.22.3",
+    "react-router-dom": "^6.22.3"
+  },
+  "browserlist": [
+    "last 3 versions"
+  ]
+}

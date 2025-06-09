@@ -1,0 +1,93 @@
+.restaurantMainPage {
+  width: 70vw;
+  margin: auto;
+  margin-top: 3rem;
+}
+.restaurantMainPage .restraurantDetails {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+
+  box-shadow: 0px 35px 60px -50px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 35px 60px -50px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 35px 60px -50px rgba(0, 0, 0, 0.6);
+}
+.restaurantMainPage .restraurantDetails .name {
+  margin-bottom: 1rem;
+}
+.restaurantMainPage .restraurantDetails .miscDetails {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 10px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.restaurantMainPage .restraurantDetails .miscDetails .cuisines {
+  color: rgb(255, 82, 0);
+  font-weight: 600;
+}
+.restaurantMainPage .restraurantDetails .miscDetails p a {
+  font-weight: 700;
+}
+.restaurantMainPage .restraurantDetails .miscDetails .ratings {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 700;
+}
+.restaurantMainPage .restraurantDetails .miscDetails .ratings .costForTwo {
+  margin-left: 10px;
+}
+
+.restaurantMainPage .itemCategory {
+  /* border: 1px solid black; */
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.restaurantMainPage .itemCategory h2 {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.restaurantMainPage .itemCategory .menuItems {
+  /* border: 1px solid blue; */
+  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+  /* padding: 1.2rem; */
+  margin-top: 10px;
+  display: flex;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+.restaurantMainPage .itemCategory .menuItems .dish {
+  width: 80%;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.restaurantMainPage .itemCategory .menuItems .dish .bold {
+  font-weight: 600;
+}
+.restaurantMainPage .itemCategory .menuItems .dishImageCont {
+  width: 20%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.restaurantMainPage .itemCategory .menuItems .dishImageCont img {
+  width: 180;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.restaurantMainPage .itemCategory .menuItems .dishImageCont button {
+  position: absolute;
+  bottom: 10;
+}

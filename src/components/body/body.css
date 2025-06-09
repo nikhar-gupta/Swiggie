@@ -1,0 +1,33 @@
+.bodyMain .topBar {
+  display: flex;
+  width: 100vw;
+  height: 40px;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.bodyMain .topBar .searchBar {
+  height: 100%;
+}
+.bodyMain .topBar .searchBar input {
+  height: 100%;
+  width: 350px;
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+}
+.bodyMain .topBar .searchBar button {
+  all: unset;
+  text-align: center;
+  height: 100%;
+  margin-left: 0.5rem;
+  width: 100px;
+  font-size: 1.1rem;
+  background-color: orange;
+}
+.bodyMain .topBar .filterRestaurantBtn {
+  padding: 0 0.5rem;
+  height: 100%;
+  font-size: 1.1rem;
+}
