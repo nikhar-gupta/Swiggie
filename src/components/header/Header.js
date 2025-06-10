@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import "./header.css";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const logo = new URL("../../assets/pics/swiggie_logo.png", import.meta.url)
     .href;
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <nav className="header">
@@ -20,7 +22,9 @@ const Header = () => {
         <li className="nav-item">
           <Link to="/contact">Contact Us</Link>
         </li>
-        <li className="nav-item">Cart</li>
+        <li className="nav-item">
+          <Link to="/cart">Cart {cartItems.length}</Link>
+        </li>
       </ul>
     </nav>
   );

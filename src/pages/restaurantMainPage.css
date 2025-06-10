@@ -3,7 +3,7 @@
   margin: auto;
   margin-top: 3rem;
 }
-.restaurantMainPage .restraurantDetails {
+.restraurantDetails {
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 3rem;
@@ -12,10 +12,10 @@
   -webkit-box-shadow: 0px 35px 60px -50px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 35px 60px -50px rgba(0, 0, 0, 0.6);
 }
-.restaurantMainPage .restraurantDetails .name {
+.restraurantDetails .name {
   margin-bottom: 1rem;
 }
-.restaurantMainPage .restraurantDetails .miscDetails {
+.restraurantDetails .miscDetails {
   border: 1px solid rgb(204, 204, 204);
   border-radius: 10px;
   margin: auto;
@@ -25,35 +25,35 @@
   gap: 0.5rem;
   font-size: 0.9rem;
 }
-.restaurantMainPage .restraurantDetails .miscDetails .cuisines {
+.restraurantDetails .miscDetails .cuisines {
   color: rgb(255, 82, 0);
   font-weight: 600;
 }
-.restaurantMainPage .restraurantDetails .miscDetails p a {
+.restraurantDetails .miscDetails p a {
   font-weight: 700;
 }
-.restaurantMainPage .restraurantDetails .miscDetails .ratings {
+.restraurantDetails .miscDetails .ratings {
   display: flex;
   align-items: center;
   gap: 0.3rem;
   font-weight: 700;
 }
-.restaurantMainPage .restraurantDetails .miscDetails .ratings .costForTwo {
+.restraurantDetails .miscDetails .ratings .costForTwo {
   margin-left: 10px;
 }
 
-.restaurantMainPage .itemCategory {
+.itemCategory {
   /* border: 1px solid black; */
   margin-top: 1rem;
   padding: 1rem;
 }
-.restaurantMainPage .itemCategory h2 {
+.itemCategory h2 {
   border: 1px solid rgb(204, 204, 204);
   border-radius: 10px;
   padding: 1rem;
 }
 
-.restaurantMainPage .itemCategory .menuItems {
+.menuItems {
   /* border: 1px solid blue; */
   padding: 0.5rem 0.5rem 1.5rem 0.5rem;
   /* padding: 1.2rem; */
@@ -61,7 +61,7 @@
   display: flex;
   border-bottom: 1px solid rgb(204, 204, 204);
 }
-.restaurantMainPage .itemCategory .menuItems .dish {
+.menuItems .dish {
   width: 80%;
   /* border: 1px solid green; */
   display: flex;
@@ -70,10 +70,10 @@
   gap: 1rem;
   padding: 0.5rem;
 }
-.restaurantMainPage .itemCategory .menuItems .dish .bold {
+.menuItems .dish .bold {
   font-weight: 600;
 }
-.restaurantMainPage .itemCategory .menuItems .dishImageCont {
+.menuItems .dishImageCont {
   width: 20%;
   overflow: hidden;
   position: relative;
@@ -81,13 +81,20 @@
   align-items: center;
   justify-content: center;
 }
-.restaurantMainPage .itemCategory .menuItems .dishImageCont img {
+.menuItems .dishImageCont img {
   width: 180;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
-.restaurantMainPage .itemCategory .menuItems .dishImageCont button {
+.menuItems .dishImageCont button {
+  all: unset;
   position: absolute;
   bottom: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(27, 166, 115);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid rgba(27, 166, 115, 0.5);
 }

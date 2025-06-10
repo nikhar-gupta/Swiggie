@@ -1,0 +1,28 @@
+.cart {
+  width: 70vw;
+  margin: auto;
+  margin-top: 3rem;
+}
+.cartHeader {
+  position: relative;
+  padding: 0 1rem;
+}
+.cartHeader .headings {
+  width: 100%;
+  text-align: center;
+}
+
+#clearCartBtn {
+  all: unset;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  color: rgb(255, 82, 0);
+  border: 1px solid rgb(255, 82, 0);
+  margin: auto;
+  position: absolute;
+  right: 4%;
+  top: 0;
+}

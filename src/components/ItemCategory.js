@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MenuItem from "./MenuItem";
 
-const ItemCategory = ({ itemCategory, index }) => {
+const ItemCategory = ({ itemCategory }) => {
   const [showAccordion, setShowAccordion] = useState(false);
 
   const handleAccordionClick = () => {
@@ -20,7 +20,10 @@ const ItemCategory = ({ itemCategory, index }) => {
       {showAccordion &&
         itemCategory?.card?.card?.itemCards?.map((menuItem) => {
           return (
-            <MenuItem menuItem={menuItem} key={menuItem?.card?.info?.id} />
+            <MenuItem
+              menuItem={menuItem?.card?.info}
+              key={menuItem?.card?.info?.id}
+            />
           );
         })}
     </ul>

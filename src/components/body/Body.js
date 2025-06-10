@@ -18,8 +18,8 @@ const Body = () => {
   }, []);
   const fetchRestaurants = async () => {
     const response = await fetch(
+      // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      // "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=28.6343038&lng=77.2191627&carousel=true&third_party_vendor=1"
     );
     const json = await response.json();
     const restaurants =

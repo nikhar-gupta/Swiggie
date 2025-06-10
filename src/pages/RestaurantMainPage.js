@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./restaurantMainPage.css";
-import MenuItem from "../components/MenuItem";
 import ItemCategory from "../components/ItemCategory";
 
 const RestaurantMainPage = () => {
@@ -14,6 +13,7 @@ const RestaurantMainPage = () => {
   }, []);
   const fetchRestaurantDetails = async () => {
     const data = await fetch(
+      //   `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`
       `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`
     );
     const json = await data.json();
