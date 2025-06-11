@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import CardContainer from "../cardContainer/CardContainer";
 import "./body.css";
 import ShimmerHome from "../shimmerUI/ShimmerHome";
+import { PROXY_URL, SWIGGY_HOME_URL } from "../../utils/constants";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const requestURL = PROXY_URL + encodeURIComponent(SWIGGY_HOME_URL);
 
   const handleFilterTopRestaurants = () => {
     const filteredRestaurant = restaurantList?.filter((res) => {
@@ -18,21 +20,16 @@ const Body = () => {
     fetchRestaurants();
   }, []);
   const fetchRestaurants = async () => {
-    const response = await fetch(
-      // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      // "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
-      // {
-      //   headers: {
-      //     origin: "https://swiggie.netlify.app/",
-      //     "x-requested-with": "XMLHttpRequest",
-      //   },
-      // }
-      "https://cors-anywhere-ma1g.onrender.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const response = await fetch(requestURL);
     const json = await response.json();
+    const restaurantObject = json?.data?.cards.filter((card) => {
+      return (
+        card.card?.card?.gridElements?.infoWithStyle["@type"] ===
+        "type.googleapis.com/swiggy.seo.widgets.v1.FoodRestaurantGridListingInfo"
+      );
+    });
     const restaurants =
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
+      restaurantObject[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     setRestaurantList(restaurants);
     setFilteredRestaurantList(restaurants);
   };
@@ -68,7 +65,7 @@ const Body = () => {
           Top-rated Restaurants
         </button>
       </div>
-      {restaurantList.length === 0 ? (
+      {restaurantList?.length === 0 ? (
         <ShimmerHome />
       ) : (
         <CardContainer restaurantList={filteredRestaurantList} />

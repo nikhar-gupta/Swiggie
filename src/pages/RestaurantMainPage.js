@@ -3,27 +3,19 @@ import { useParams } from "react-router";
 import "./restaurantMainPage.css";
 import ItemCategory from "../components/ItemCategory";
 import ShimmerRestroPage from "../components/shimmerUI/ShimmerRestroPage";
+import { PROXY_URL, SWIGGY_RESTRO_URL } from "../utils/constants";
 
 const RestaurantMainPage = () => {
   const [restaurantDetails, setRestaurantDetails] = useState("");
   const { resId } = useParams();
   const star = new URL("../assets/pics/star.png", import.meta.url).href;
+  const requestURL = PROXY_URL + encodeURIComponent(SWIGGY_RESTRO_URL) + resId;
 
   useEffect(() => {
     fetchRestaurantDetails();
   }, []);
   const fetchRestaurantDetails = async () => {
-    const data = await fetch(
-      //   `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`
-      // `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`,
-      // {
-      //   headers: {
-      //     origin: "https://swiggie.netlify.app/",
-      //     "x-requested-with": "XMLHttpRequest",
-      //   },
-      // }
-      `https://cors-anywhere-ma1g.onrender.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`
-    );
+    const data = await fetch(requestURL);
     const json = await data.json();
     setRestaurantDetails(json);
   };
@@ -44,7 +36,7 @@ const RestaurantMainPage = () => {
     sla,
   } = info;
 
-  return Object.keys(restaurantDetails).length === 0 ? (
+  return Object.keys(restaurantDetails)?.length === 0 ? (
     <ShimmerRestroPage />
   ) : (
     <div className="restaurantMainPage">
