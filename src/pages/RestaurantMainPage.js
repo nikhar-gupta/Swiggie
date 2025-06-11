@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./restaurantMainPage.css";
 import ItemCategory from "../components/ItemCategory";
+import ShimmerRestroPage from "../components/shimmerUI/ShimmerRestroPage";
 
 const RestaurantMainPage = () => {
-  const [restaurantDetails, setRestaurantDetails] = useState(null);
+  const [restaurantDetails, setRestaurantDetails] = useState("");
   const { resId } = useParams();
   const star = new URL("../assets/pics/star.png", import.meta.url).href;
 
@@ -42,7 +43,9 @@ const RestaurantMainPage = () => {
     sla,
   } = info;
 
-  return (
+  return Object.keys(restaurantDetails).length === 0 ? (
+    <ShimmerRestroPage />
+  ) : (
     <div className="restaurantMainPage">
       <div className="restraurantDetails">
         <h1 className="name">{name}</h1>

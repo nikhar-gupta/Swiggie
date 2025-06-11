@@ -46,6 +46,7 @@
   /* border: 1px solid black; */
   margin-top: 1rem;
   padding: 1rem;
+  cursor: pointer;
 }
 .itemCategory h2 {
   border: 1px solid rgb(204, 204, 204);

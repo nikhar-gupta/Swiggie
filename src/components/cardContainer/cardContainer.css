@@ -1,19 +1,28 @@
+.restroCardLinks {
+  all: unset;
+}
 .cardContainer {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
-  /* width: 90vw; */
-  margin-top: 2rem;
+  margin: 2rem 0;
+  cursor: pointer;
 }
 
 .cardContainer .restaurantCard {
-  border: 1px solid red;
+  transition: transform 0.3s ease;
   width: 350px;
+  height: 370px;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   overflow: hidden;
+  border-radius: 10px;
+  background-color: rgb(238, 238, 238);
+}
+.cardContainer .restaurantCard .restroCardDetails {
+  padding: 0 1rem 1rem 1rem;
 }
 
 .cardContainer .restaurantCard .restaurant-pic {
@@ -21,7 +30,7 @@
   object-fit: cover;
 }
 
-.cardContainer .restaurantCard .restaurant-name {
+.cardContainer .restaurantCard .restroCardDetails .restaurant-name {
   font-size: 1.3rem;
   font-weight: 600;
   height: 40px;
@@ -30,16 +39,25 @@
   margin-top: 0.5rem;
   cursor: pointer;
 }
-.cardContainer .restaurantCard .ratings {
+.cardContainer .restaurantCard .restroCardDetails .ratings {
   display: flex;
   width: 100%;
   gap: 0.5rem;
   align-items: flex-end;
   margin-top: 0.5rem;
 }
-.cardContainer .restaurantCard .ratings img {
+.cardContainer .restaurantCard .restroCardDetails .ratings img {
   margin-right: -0.3rem;
 }
-.cardContainer .restaurantCard .ratings .time {
+.cardContainer .restaurantCard .restroCardDetails .ratings .time {
   font-weight: 600;
+}
+.cardContainer .restaurantCard .restroCardDetails .cuisines {
+  margin-top: 0.5rem;
+}
+.restaurantCard:hover {
+  transform: scale(1.05);
+}
+.restaurantCard:active {
+  transform: scale(0.95);
 }

@@ -1,21 +1,28 @@
+.bodyMain {
+  width: 70%;
+  margin: auto;
+}
 .bodyMain .topBar {
   display: flex;
-  width: 100vw;
   height: 40px;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
   padding: 0 1rem;
   margin-top: 1rem;
 }
 
 .bodyMain .topBar .searchBar {
   height: 100%;
+  cursor: pointer;
 }
 .bodyMain .topBar .searchBar input {
   height: 100%;
   width: 350px;
   padding: 0 0.5rem;
   font-size: 1.1rem;
+  border-radius: 10px;
+  border: 1px solid #afafaf;
 }
 .bodyMain .topBar .searchBar button {
   all: unset;
@@ -25,9 +32,21 @@
   width: 100px;
   font-size: 1.1rem;
   background-color: orange;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.bodyMain .topBar .searchBar button:active {
+  transform: scale(0.8);
 }
 .bodyMain .topBar .filterRestaurantBtn {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
   padding: 0 0.5rem;
   height: 100%;
+  cursor: pointer;
+  border: 1px solid #afafaf;
   font-size: 1.1rem;
+}
+.bodyMain .topBar .filterRestaurantBtn:active {
+  transform: scale(0.9);
 }

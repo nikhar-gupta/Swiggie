@@ -10,7 +10,9 @@ const Header = () => {
   return (
     <nav className="header">
       <section className="logo">
-        <img src={logo} height="100px" alt="logo" />
+        <Link to="/">
+          <img src={logo} height="100px" alt="logo" />
+        </Link>
       </section>
       <ul className="nav-items">
         <li className="nav-item">

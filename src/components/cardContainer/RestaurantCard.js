@@ -7,13 +7,15 @@ const RestaurantCard = ({ name, rating, time, image, cuisines, locality }) => {
         alt="restaurant-pic"
         className="restaurant-pic"
       />
-      <p className="restaurant-name">{name}</p>
-      <p className="ratings">
-        <img src={star} width="20px" />
-        {rating} <span className="time">{time} Minutes</span>
-      </p>
-      <p className="cuisines">{cuisines.join(", ")}</p>
-      <p className="locality">{locality}</p>
+      <div className="restroCardDetails">
+        <p className="restaurant-name">{name}</p>
+        <p className="ratings">
+          <img src={star} width="20px" />
+          {rating} <span className="time">{time} Minutes</span>
+        </p>
+        <p className="cuisines">{cuisines.join(", ")}</p>
+        <p className="locality">{locality}</p>
+      </div>
     </div>
   );
 };

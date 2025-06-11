@@ -7,7 +7,11 @@ const CardContainer = ({ restaurantList }) => {
     <div className="cardContainer">
       {restaurantList?.map((rest) => {
         return (
-          <Link to={"/restaurant/" + rest?.info?.id} key={rest?.info?.id}>
+          <Link
+            to={"/restaurant/" + rest?.info?.id}
+            key={rest?.info?.id}
+            className="restroCardLinks"
+          >
             <RestaurantCard
               name={rest?.info?.name}
               rating={rest?.info?.avgRating}

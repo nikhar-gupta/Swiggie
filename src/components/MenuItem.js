@@ -1,8 +1,35 @@
 import { useDispatch } from "react-redux";
 import { addItem, removeItem } from "../utils/store/cartSlice";
+import { Flip, toast } from "react-toastify";
 
 const MenuItem = ({ menuItem, isCartPage }) => {
   const dispatch = useDispatch();
+  const notifyAddedToCart = () =>
+    toast.success("Added to cart!", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Flip,
+    });
+
+  const notifyRemovedFromCart = () =>
+    toast.warn("Item removed from cart!", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Flip,
+    });
+
   const handleAddToCart = () => {
     const uniqueId = `${menuItem?.id}-${Date.now()}-${Math.floor(
       Math.random() * 1000
@@ -12,9 +39,11 @@ const MenuItem = ({ menuItem, isCartPage }) => {
       id: uniqueId,
     };
     dispatch(addItem(newMenuItem));
+    notifyAddedToCart();
   };
   const handleRemoveItem = () => {
     dispatch(removeItem(menuItem));
+    notifyRemovedFromCart();
   };
   return (
     <li className="menuItems">

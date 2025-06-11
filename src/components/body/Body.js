@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CardContainer from "../cardContainer/CardContainer";
 import "./body.css";
+import ShimmerHome from "../shimmerUI/ShimmerHome";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -9,7 +10,7 @@ const Body = () => {
 
   const handleFilterTopRestaurants = () => {
     const filteredRestaurant = restaurantList?.filter((res) => {
-      return res?.info?.avgRating > 4;
+      return res?.info?.avgRating > 4.2;
     });
     setFilteredRestaurantList(filteredRestaurant);
   };
@@ -33,7 +34,6 @@ const Body = () => {
         ?.restaurants;
     setRestaurantList(restaurants);
     setFilteredRestaurantList(restaurants);
-    console.log(json);
   };
 
   return (
@@ -67,7 +67,11 @@ const Body = () => {
           Top-rated Restaurants
         </button>
       </div>
-      <CardContainer restaurantList={filteredRestaurantList} />
+      {restaurantList.length === 0 ? (
+        <ShimmerHome />
+      ) : (
+        <CardContainer restaurantList={filteredRestaurantList} />
+      )}
     </div>
   );
 };

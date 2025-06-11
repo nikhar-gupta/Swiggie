@@ -9,6 +9,7 @@ import RestaurantMainPage from "./pages/RestaurantMainPage";
 import { Provider } from "react-redux";
 import store from "./utils/store/store";
 import Cart from "./pages/Cart";
+import { ToastContainer } from "react-toastify";
 
 const AppLayout = () => {
   return (
@@ -16,6 +17,7 @@ const AppLayout = () => {
       <div>
         <Header />
         <Outlet />
+        <ToastContainer />
       </div>
     </Provider>
   );

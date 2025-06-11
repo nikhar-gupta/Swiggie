@@ -1,0 +1,13 @@
+.shimmerContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.shimmerCard {
+  width: 350px;
+  height: 370px;
+  border-radius: 10px;
+  background-color: rgb(238, 238, 238);
+}
