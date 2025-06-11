@@ -18,8 +18,8 @@ const RestaurantMainPage = () => {
     const data = await fetch(requestURL);
     const json = await data.json();
     setRestaurantDetails(json);
+    console.log(json);
   };
-
   const info = restaurantDetails?.data?.cards[2]?.card?.card?.info || {};
   console.log(restaurantDetails);
   const itemCategories =
@@ -61,8 +61,10 @@ const RestaurantMainPage = () => {
       </div>
       {itemCategories?.map((itemCategory, index) => {
         if (
-          itemCategory?.card?.card["@type"] ===
-          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+          itemCategory?.card?.card["@type"].includes(
+            "type.googleapis.com/swiggy.presentation.food.v2."
+          ) &&
+          itemCategory?.card?.card?.itemCards?.length
         ) {
           return (
             <ItemCategory
