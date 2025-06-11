@@ -4,7 +4,6 @@ import Body from "./components/body/Body";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Error from "./pages/Error";
 import ContactUs from "./pages/ContactUs";
-import About from "./pages/About";
 import RestaurantMainPage from "./pages/RestaurantMainPage";
 import { Provider } from "react-redux";
 import store from "./utils/store/store";
@@ -33,17 +32,9 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/about",
-        element: <About />,
-      },
-      {
         path: "/contact",
         element: <ContactUs />,
       },
-      // {
-      //   path: "/login",
-      //   element: <Login />,
-      // },
       {
         path: "/cart",
         element: <Cart />,

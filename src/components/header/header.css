@@ -2,26 +2,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.5rem 0 0.5rem;
+  padding: 0 1.5rem 0 0;
   height: 70px;
-  width: 70vw;
+  width: 100vw;
   margin: auto;
   margin-top: 1rem;
   border-radius: 100px;
   border: 2px solid #afafaf;
 }
-
 .header .nav-items {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.7rem;
 }
 .header .nav-items .nav-item {
   all: unset;
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   cursor: pointer;
   font-weight: 600;
 }
 .header .nav-items .nav-item a {
   all: unset;
+}
+@media only screen and (min-width: 440px) {
+  .header {
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .header {
+    width: 80vw;
+  }
+  .header .nav-items {
+    gap: 1rem;
+  }
+  .header .nav-items .nav-item {
+    font-size: 1.2rem;
+  }
 }

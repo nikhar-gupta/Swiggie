@@ -1,6 +1,62 @@
 .bodyMain {
+  width: 95%;
+  margin: auto;
+  padding: 0 0.5rem;
+}
+.bodyMain .topBar {
+  display: flex;
+  /* height: 40px; */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+.bodyMain .topBar .searchBar {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+}
+.bodyMain .topBar .searchBar input {
+  height: 2rem;
+  width: 150px;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #afafaf;
+}
+.bodyMain .topBar .searchBar button {
+  all: unset;
+  text-align: center;
+  height: 2rem;
+  margin-left: 0.5rem;
+  width: 50px;
+  padding: 0 0.5rem;
+  font-size: 0.95rem;
+  background-color: orange;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.bodyMain .topBar .searchBar button:active {
+  transform: scale(0.8);
+}
+.bodyMain .topBar .filterRestaurantBtn {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  padding: 0 0.5rem;
+  height: 2rem;
+  cursor: pointer;
+  border: 1px solid #afafaf;
+  font-size: 0.8rem;
+}
+.bodyMain .topBar .filterRestaurantBtn:active {
+  transform: scale(0.9);
+}
+
+/* .bodyMain {
   width: 70%;
   margin: auto;
+  border: 1px solid red;
 }
 .bodyMain .topBar {
   display: flex;
@@ -49,4 +105,4 @@
 }
 .bodyMain .topBar .filterRestaurantBtn:active {
   transform: scale(0.9);
-}
+} */

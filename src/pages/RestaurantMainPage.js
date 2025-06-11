@@ -70,7 +70,6 @@ const RestaurantMainPage = () => {
             <ItemCategory
               key={itemCategory?.card?.card?.categoryId}
               itemCategory={itemCategory}
-              index={index}
             />
           );
         }

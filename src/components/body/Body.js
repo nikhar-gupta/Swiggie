@@ -38,6 +38,8 @@ const Body = () => {
       const restaurants =
         restaurantObject[0]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants || [];
+      console.log(json);
+
       setRestaurantList(restaurants);
       setFilteredRestaurantList(restaurants);
       dispatch(addAllRestaurants(restaurants));
@@ -53,6 +55,7 @@ const Body = () => {
         <div className="searchBar">
           <input
             type="text"
+            placeholder="Search Restaurants"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);

@@ -1,0 +1,23 @@
+.contactUs {
+  width: 90vw;
+  margin: auto;
+  margin-top: 2rem;
+}
+.contactUs h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contactUs h2 {
+  margin-bottom: 1rem;
+}
+.contactUs h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+@media only screen and (min-width: 700px) {
+  .contactUs {
+    width: 70vw;
+  }
+}

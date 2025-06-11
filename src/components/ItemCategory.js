@@ -18,7 +18,7 @@ const ItemCategory = ({ itemCategory }) => {
       </h2>
 
       {showAccordion &&
-        itemCategory?.card?.card?.itemCards?.map((menuItem) => {
+        itemCategory?.card?.card?.itemCards?.map((menuItem, index) => {
           return (
             <MenuItem
               menuItem={menuItem?.card?.info}
