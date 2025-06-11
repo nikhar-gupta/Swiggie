@@ -20,13 +20,14 @@ const Body = () => {
   const fetchRestaurants = async () => {
     const response = await fetch(
       // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
-      {
-        headers: {
-          origin: "https://swiggie.netlify.app/", // or any dummy origin
-          "x-requested-with": "XMLHttpRequest",
-        },
-      }
+      // "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+      // {
+      //   headers: {
+      //     origin: "https://swiggie.netlify.app/",
+      //     "x-requested-with": "XMLHttpRequest",
+      //   },
+      // }
+      "https://cors-anywhere-ma1g.onrender.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.468338&lng=81.85460189999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await response.json();
     const restaurants =

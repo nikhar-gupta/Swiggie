@@ -15,13 +15,14 @@ const RestaurantMainPage = () => {
   const fetchRestaurantDetails = async () => {
     const data = await fetch(
       //   `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`
-      `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`,
-      {
-        headers: {
-          origin: "https://swiggie.netlify.app/", // or any dummy origin
-          "x-requested-with": "XMLHttpRequest",
-        },
-      }
+      // `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`,
+      // {
+      //   headers: {
+      //     origin: "https://swiggie.netlify.app/",
+      //     "x-requested-with": "XMLHttpRequest",
+      //   },
+      // }
+      `https://cors-anywhere-ma1g.onrender.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.468338&lng=81.85460189999999&restaurantId=${resId}`
     );
     const json = await data.json();
     setRestaurantDetails(json);
